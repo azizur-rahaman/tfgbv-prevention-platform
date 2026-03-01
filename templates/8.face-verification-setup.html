@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nirvhoy - Face Verification</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2563EB",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#0B1220",
+                        "neutral-custom": "#374151",
+                        "text-secondary": "#94a3b8"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "10px",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+    <div class="relative flex h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-hidden">
+        <!-- TopAppBar Component -->
+        <div class="flex items-center p-4 pb-2 justify-between">
+            <button
+                class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center justify-start focus:outline-none">
+                <span class="material-symbols-outlined" style="font-size: 24px;">arrow_back</span>
+            </button>
+            <h2
+                class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">
+                Nirvhoy</h2>
+        </div>
+        <!-- Center Illustration Area -->
+        <div class="flex w-full grow items-center justify-center p-8">
+            <div
+                class="relative flex aspect-square w-full max-w-[280px] items-center justify-center border-2 border-dashed border-slate-700 rounded-3xl">
+                <!-- Face Scan UI Ornament -->
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-white/90"
+                        style="font-size: 120px; font-variation-settings: 'wght' 200;">
+                        face_6
+                    </span>
+                </div>
+                <!-- Scan Corners -->
+                <div class="absolute top-6 left-6 w-8 h-8 border-t-2 border-l-2 border-primary rounded-tl-lg"></div>
+                <div class="absolute top-6 right-6 w-8 h-8 border-t-2 border-r-2 border-primary rounded-tr-lg"></div>
+                <div class="absolute bottom-6 left-6 w-8 h-8 border-b-2 border-l-2 border-primary rounded-bl-lg"></div>
+                <div class="absolute bottom-6 right-6 w-8 h-8 border-b-2 border-r-2 border-primary rounded-br-lg"></div>
+                <!-- Scanning Line Effect Simulated with CSS -->
+                <div class="absolute top-1/2 left-4 right-4 h-0.5 bg-primary/40 shadow-[0_0_15px_rgba(37,99,235,0.8)]">
+                </div>
+            </div>
+        </div>
+        <!-- Content Area -->
+        <div class="px-6 text-center">
+            <h1
+                class="text-slate-900 dark:text-white text-[22px] font-semibold leading-tight tracking-[-0.015em] pb-3 pt-5">
+                Enable Face Verification
+            </h1>
+            <p class="text-slate-600 dark:text-text-secondary text-base font-normal leading-normal max-w-xs mx-auto">
+                Use Face ID to unlock your secure locker.
+            </p>
+        </div>
+        <!-- Action Buttons -->
+        <div class="flex justify-center mt-auto pb-10">
+            <div class="flex flex-1 gap-4 max-w-[480px] flex-col items-stretch px-6 py-3">
+                <button
+                    class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-5 bg-primary text-white text-base font-semibold leading-normal tracking-[0.015em] w-full transition-colors hover:bg-primary/90">
+                    <span class="truncate">Enable Face ID</span>
+                </button>
+                <button
+                    class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-5 border border-neutral-custom bg-transparent text-[#E5E7EB] text-base font-semibold leading-normal tracking-[0.015em] w-full transition-colors hover:bg-white/5">
+                    <span class="truncate">Skip for Now</span>
+                </button>
+            </div>
+        </div>
+        <!-- Decorative elements to reinforce institutional feel -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent">
+        </div>
+        <div class="flex justify-center pb-4">
+            <div class="w-32 h-1.5 bg-slate-800 rounded-full"></div>
+        </div>
+    </div>
+</body>
+
+</html>

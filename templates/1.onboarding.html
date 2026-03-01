@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Onboarding - Secure Vault</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2563EB",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#0B1220",
+                        "neutral-dark": "#1E293B",
+                        "accent-muted": "#64748B"
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+    <div class="relative flex h-screen w-full flex-col overflow-x-hidden">
+        <!-- Top App Bar / Close -->
+        <div class="flex items-center p-6 justify-end">
+            <button class="text-slate-500 dark:text-accent-muted hover:text-primary transition-colors">
+                <span class="material-symbols-outlined text-[28px]">close</span>
+            </button>
+        </div>
+        <!-- Center Illustration Area -->
+        <div class="flex w-full grow flex-col items-center justify-center p-8">
+            <div
+                class="relative flex items-center justify-center w-64 h-64 bg-primary/10 rounded-full mb-12 border border-primary/20">
+                <!-- Decorative Ring -->
+                <div class="absolute inset-0 border-2 border-dashed border-primary/20 rounded-full animate-pulse-slow">
+                </div>
+                <!-- Illustration Icon Placeholder -->
+                <div class="flex flex-col items-center gap-2">
+                    <span class="material-symbols-outlined text-[100px] text-primary"
+                        style="font-variation-settings: 'wght' 200;">
+                        shield_with_heart
+                    </span>
+                    <span class="material-symbols-outlined text-[48px] text-primary -mt-6"
+                        style="font-variation-settings: 'wght' 200;">
+                        smartphone
+                    </span>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="max-w-md w-full text-center space-y-4">
+                <h1 class="text-slate-900 dark:text-slate-100 text-3xl font-bold tracking-tight leading-tight px-4">
+                    Your Digital Evidence, Protected.
+                </h1>
+                <p class="text-slate-600 dark:text-accent-muted text-base font-normal leading-relaxed px-6">
+                    Capture and store evidence securely in a government-protected vault.
+                </p>
+            </div>
+        </div>
+        <!-- Bottom Section -->
+        <div class="p-8 pb-12 flex flex-col items-center gap-8">
+            <!-- Pagination Dots -->
+            <div class="flex flex-row items-center justify-center gap-3">
+                <div class="h-2 w-6 rounded-full bg-primary"></div>
+                <div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-neutral-dark"></div>
+                <div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-neutral-dark"></div>
+            </div>
+            <!-- Primary Action -->
+            <div class="w-full max-w-md">
+                <button
+                    class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 h-[48px] rounded-lg transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+                    Next
+                    <span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+                </button>
+            </div>
+            <!-- Secondary/Security Label -->
+            <div class="flex items-center gap-2 text-xs uppercase tracking-widest text-accent-muted font-medium">
+                <span class="material-symbols-outlined text-xs">verified_user</span>
+                AES-256 Military Grade Encryption
+            </div>
+        </div>
+    </div>
+    <!-- Hidden visual aid for background if needed as img -->
+    <div class="hidden">
+        <img alt="security-illustration" data-alt="Minimalist shield and smartphone line icon"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBds_uaS_ozH6fgIxvbcNSrd81BINduC181wjmdcpp1xNUVXvOab4g2uZw2A62kHD6COpgEpb_dZoDhZFUiIT3OCdR2t2iLbb5592_AhEBIKhzoGjPmmugPmj-4B7AEFlOIo97ySd73UpXueVPa86zEfVxIxhB9MA-DtayR7quMc7BuRp1aee2HI7fC7zP1UQUGY3tfa_J2g5BRdZUTiCh2xvQhXNrHrhMB0aXdWiqP5NtpnRheecp1SwD9BTJ9fgADhSd1GinEV332" />
+    </div>
+</body>
+
+</html>

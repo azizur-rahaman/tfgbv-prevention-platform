@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Forensic App Onboarding</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2563EB",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#0B1220",
+                        "neutral-400": "#94a3b8",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased font-display">
+    <div class="relative flex h-screen w-full flex-col overflow-x-hidden">
+        <!-- Top Bar / Navigation Space -->
+        <div class="flex items-center p-6 justify-between">
+            <div class="text-slate-100 flex size-10 shrink-0 items-center justify-start cursor-pointer">
+                <span class="material-symbols-outlined text-2xl">arrow_back</span>
+            </div>
+            <div class="text-neutral-400 text-sm font-semibold uppercase tracking-widest">
+                Security
+            </div>
+            <div class="size-10"></div> <!-- Spacer for centering -->
+        </div>
+        <!-- Illustration Section -->
+        <div class="flex w-full grow flex-col items-center justify-center px-8 @container">
+            <div
+                class="w-full max-w-sm aspect-square relative flex items-center justify-center rounded-xl bg-primary/5 border border-primary/10">
+                <!-- Abstract Representation of minimal line-style digital lock with blockchain nodes -->
+                <div
+                    class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent">
+                </div>
+                <div class="relative z-10 w-48 h-48 flex items-center justify-center">
+                    <!-- Icon Placeholder matching description -->
+                    <div class="relative">
+                        <span class="material-symbols-outlined text-[120px] text-primary font-light">
+                            lock_open
+                        </span>
+                        <!-- Mocking the blockchain nodes with CSS or icons -->
+                        <div
+                            class="absolute -top-4 -left-4 size-4 rounded-full border border-primary flex items-center justify-center">
+                            <div class="size-1 bg-primary rounded-full"></div>
+                        </div>
+                        <div
+                            class="absolute -bottom-2 -right-6 size-6 rounded-full border border-primary flex items-center justify-center">
+                            <div class="size-2 bg-primary rounded-full"></div>
+                        </div>
+                        <div class="absolute top-1/2 -right-8 size-3 rounded-full border border-primary/50"></div>
+                        <!-- SVG Lines to simulate connectivity -->
+                        <svg class="absolute inset-[-40px] w-[calc(100%+80px)] h-[calc(100%+80px)] pointer-events-none opacity-40"
+                            stroke="currentColor">
+                            <line stroke="#2563EB" stroke-width="1" x1="20" x2="60" y1="20" y2="60"></line>
+                            <line stroke="#2563EB" stroke-width="1" x1="180" x2="220" y1="140" y2="180"></line>
+                            <line stroke="#2563EB" stroke-width="1" x1="40" x2="80" y1="180" y2="150"></line>
+                        </svg>
+                    </div>
+                </div>
+                <div class="w-full h-full absolute" data-alt="Minimal line digital lock with connected nodes"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFAsTOk3dgJUkjyq5M40nq9YEO41LySp6a7JVBDzPg9TtnLC3H-G4dfBTCqj16T5B3FL0j18RyktbVtHyMZGXTaAjJnNYT06HUu3ZnGuY2CMJ60SH9CfCeejdtMa4hfl6C_ZXEluHm-5JwM6WGMcMEfrczKtTJoe_49ECb1eQAzW6qAljyuq7Jy8dmZU3h-E7vUUr1kK-ZYlsCCxu9_qFwWYJLLsR-V3F7iQ-egcNaJnbvXarqAaC6CRvqnQXJWiWimObFMHkLwMSR');">
+                </div>
+            </div>
+        </div>
+        <!-- Text Content -->
+        <div class="px-8 pt-10 pb-6 text-center">
+            <h1 class="text-slate-100 text-[32px] font-bold leading-tight tracking-tight mb-4">
+                Forensic-Grade Security
+            </h1>
+            <p class="text-neutral-400 text-lg font-normal leading-relaxed max-w-xs mx-auto">
+                Every file is encrypted, timestamped, and legally verifiable.
+            </p>
+        </div>
+        <!-- Pagination Dots -->
+        <div class="flex w-full flex-row items-center justify-center gap-3 py-6">
+            <div class="h-2 w-2 rounded-full bg-primary/20"></div>
+            <div class="h-2 w-4 rounded-full bg-primary"></div>
+            <div class="h-2 w-2 rounded-full bg-primary/20"></div>
+        </div>
+        <!-- Action Button -->
+        <div class="px-8 pb-12">
+            <button
+                class="w-full h-[48px] bg-primary hover:bg-primary/90 text-white font-semibold rounded-[10px] transition-colors flex items-center justify-center shadow-lg shadow-primary/20">
+                Next
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>

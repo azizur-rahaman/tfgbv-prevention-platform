@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2563EB",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#0B1220",
+                        "input-dark": "#111827",
+                        "border-dark": "#374151",
+                        "text-grey": "#9CA3AF"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "10px",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <title>Identity Verification</title>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-dark font-display text-slate-100 min-h-screen flex items-center justify-center p-6">
+    <div class="w-full max-w-[480px] flex flex-col">
+        <!-- Header Section -->
+        <header class="mb-10 text-left">
+            <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-6">
+                <span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+            </div>
+            <h1 class="text-white tracking-tight text-[32px] font-bold leading-tight">
+                Verify Your Identity
+            </h1>
+            <p class="text-text-grey mt-2 text-base">
+                Please enter your credentials to access the secure portal.
+            </p>
+        </header>
+        <!-- Form Section -->
+        <div class="space-y-6">
+            <!-- National ID Input (Focused State) -->
+            <div class="flex flex-col gap-2">
+                <label class="text-slate-200 text-sm font-medium leading-normal">
+                    National ID Number
+                </label>
+                <div class="relative flex items-stretch">
+                    <input
+                        class="form-input w-full rounded-lg text-white border-primary bg-input-dark h-14 placeholder:text-slate-500 p-[15px] pr-12 text-base font-normal ring-1 ring-primary focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                        type="text" value="1234-5678-9012" />
+                    <div
+                        class="absolute right-4 top-1/2 -translate-y-1/2 text-primary flex items-center justify-center">
+                        <span class="material-symbols-outlined">check_circle</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Phone Number Input -->
+            <div class="flex flex-col gap-2">
+                <label class="text-slate-200 text-sm font-medium leading-normal">
+                    Phone Number
+                </label>
+                <div class="relative">
+                    <input
+                        class="form-input w-full rounded-lg text-white border-border-dark bg-input-dark h-14 placeholder:text-slate-500 p-[15px] text-base font-normal focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                        placeholder="+1 (555) 000-0000" type="tel" />
+                </div>
+            </div>
+            <!-- Action Button -->
+            <div class="pt-4">
+                <button
+                    class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-5 bg-primary hover:bg-blue-600 text-white text-base font-bold leading-normal tracking-wide transition-colors">
+                    <span class="truncate">Send OTP</span>
+                </button>
+            </div>
+        </div>
+        <!-- Footer Disclaimer -->
+        <footer class="mt-auto pt-12">
+            <div class="flex items-center justify-center gap-2 px-4">
+                <span class="material-symbols-outlined text-text-grey text-sm">gavel</span>
+                <p class="text-text-grey text-sm font-normal leading-normal text-center">
+                    Your identity is verified using the national database.
+                </p>
+            </div>
+            <!-- Technical Support Link -->
+            <div class="mt-8 flex justify-center">
+                <a class="text-primary/80 hover:text-primary text-xs font-medium uppercase tracking-widest transition-colors"
+                    href="#">
+                    Secure Gateway v4.2
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

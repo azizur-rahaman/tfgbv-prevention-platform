@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'config/theme/app_theme.dart';
 import 'config/theme/app_colors.dart';
+import 'features/auth/presentation/bloc/auth_bloc.dart';
+import 'features/auth/presentation/bloc/auth_event.dart';
+import 'features/auth/presentation/bloc/auth_state.dart';
+import 'features/auth/presentation/pages/onboarding_page.dart';
+import 'features/auth/presentation/pages/login_page.dart';
+import 'features/auth/presentation/pages/otp_verification_page.dart';
+import 'features/auth/presentation/pages/verification_success_page.dart';
+import 'features/auth/presentation/pages/app_password_setup_page.dart';
+import 'features/auth/presentation/pages/face_id_setup_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,8 +24,41 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'TFGBV Prevention Platform',
       theme: AppTheme.darkTheme,
-      home: const TestDashboardScreen(),
+      home: BlocProvider(
+        create: (context) => AuthBloc()..add(AppStarted()),
+        child: const AuthWrapper(),
+      ),
       debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+class AuthWrapper extends StatelessWidget {
+  const AuthWrapper({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocConsumer<AuthBloc, AuthState>(
+      listener: (context, state) {
+        // Handle side effects here if needed
+      },
+      builder: (context, state) {
+        if (state is AuthOnboarding) return const OnboardingPage();
+        if (state is AuthUnauthenticated) return const LoginPage();
+        if (state is AuthOtpVerification) return const OtpVerificationPage();
+        if (state is AuthVerifiedSuccess) {
+          return const VerificationSuccessPage();
+        }
+        if (state is AuthAppPasswordSetup) return const AppPasswordSetupPage();
+        if (state is AuthFaceIdSetup) return const FaceIdSetupPage();
+        if (state is AuthAuthenticated) return const TestDashboardScreen();
+        if (state is AuthLoading) {
+          return const Scaffold(
+            body: Center(child: CircularProgressIndicator()),
+          );
+        }
+        return const Scaffold(body: Center(child: CircularProgressIndicator()));
+      },
     );
   }
 }

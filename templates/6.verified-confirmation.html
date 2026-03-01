@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2563EB",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#0B1220",
+                        "success": "#10B981",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-dark text-slate-100 font-display">
+    <div class="relative flex min-h-screen w-full flex-col bg-background-dark overflow-x-hidden">
+        <!-- Header / TopAppBar -->
+        <div class="flex items-center bg-background-dark p-4 pb-2 justify-between">
+            <button aria-label="Go back"
+                class="text-slate-100 flex size-12 shrink-0 items-center justify-start hover:bg-slate-800/50 rounded-full transition-colors">
+                <span class="material-symbols-outlined">arrow_back</span>
+            </button>
+            <h2 class="text-slate-100 text-lg font-semibold leading-tight tracking-tight flex-1 text-center pr-12">
+                Verification</h2>
+        </div>
+        <!-- Main Content Area -->
+        <div class="flex flex-1 flex-col items-center justify-center px-6 py-12">
+            <!-- Secure Shield Icon -->
+            <div class="relative mb-10 flex items-center justify-center">
+                <div class="absolute inset-0 bg-success/20 blur-3xl rounded-full scale-150"></div>
+                <div class="relative bg-slate-800/40 p-8 rounded-full border border-slate-700/50">
+                    <div
+                        class="flex items-center justify-center w-24 h-24 bg-slate-900 border-2 border-slate-700 rounded-2xl rotate-45 overflow-hidden shadow-2xl">
+                        <div class="-rotate-45 flex flex-col items-center justify-center">
+                            <span class="material-symbols-outlined text-success text-6xl"
+                                style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48">
+                                shield_with_heart
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Absolute Positioned Success Check -->
+                    <div
+                        class="absolute -bottom-2 -right-2 bg-success text-white rounded-full p-2 border-4 border-background-dark shadow-xl">
+                        <span class="material-symbols-outlined text-2xl font-bold">check</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Status Badge -->
+            <div class="mb-6 px-4 py-1.5 bg-success/10 border border-success/30 rounded-full">
+                <p class="text-success text-xs font-bold tracking-[0.1em] uppercase">Identity Verified</p>
+            </div>
+            <!-- Text Content -->
+            <h1 class="text-slate-100 tracking-tight text-[36px] font-bold leading-tight text-center pb-4">
+                Identity Verified.
+            </h1>
+            <p class="text-slate-400 text-lg font-normal leading-relaxed text-center max-w-[320px] mb-8">
+                Your secure locker is ready and all documents have been encrypted.
+            </p>
+            <!-- Verification Details Card -->
+            <div class="w-full max-w-sm bg-slate-900/50 border border-slate-800 rounded-xl p-4 mb-8">
+                <div class="flex items-center justify-between py-2 border-b border-slate-800">
+                    <span class="text-slate-500 text-sm">Status</span>
+                    <span class="text-success text-sm font-medium">Secured</span>
+                </div>
+                <div class="flex items-center justify-between py-2 border-b border-slate-800">
+                    <span class="text-slate-500 text-sm">Method</span>
+                    <span class="text-slate-200 text-sm font-medium">Biometric Scan</span>
+                </div>
+                <div class="flex items-center justify-between py-2">
+                    <span class="text-slate-500 text-sm">Ref ID</span>
+                    <span class="text-slate-200 text-sm font-mono text-xs">99A-4X7-L01</span>
+                </div>
+            </div>
+        </div>
+        <!-- Action Footer -->
+        <div class="p-6 mt-auto">
+            <button
+                class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-4 rounded-lg transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2 active:scale-[0.98]">
+                <span>Continue</span>
+                <span class="material-symbols-outlined text-xl">arrow_forward</span>
+            </button>
+            <p class="text-slate-500 text-center text-xs mt-6 px-8 leading-relaxed">
+                Your information is protected by industry-standard 256-bit encryption and will never be shared without
+                consent.
+            </p>
+        </div>
+        <!-- Background Decoration (Subtle) -->
+        <div class="fixed top-0 right-0 -z-10 w-full h-full overflow-hidden pointer-events-none">
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-[100px]"></div>
+            <div class="absolute bottom-1/4 -left-24 w-64 h-64 bg-success/5 rounded-full blur-[80px]"></div>
+        </div>
+    </div>
+</body>
+
+</html>

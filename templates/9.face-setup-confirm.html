@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Biometric Verification Success</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#0B1220",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display antialiased">
+    <div class="relative flex h-screen w-full flex-col items-center justify-center overflow-x-hidden p-6">
+        <!-- Center Illustration Area -->
+        <div class="flex flex-col items-center justify-center w-full max-w-md space-y-8">
+            <!-- Biometric Success Icon Component -->
+            <div class="relative flex items-center justify-center">
+                <!-- Outer Pulse Effect -->
+                <div class="absolute w-32 h-32 rounded-full bg-emerald-500/10 border border-emerald-500/20"></div>
+                <div class="absolute w-44 h-44 rounded-full bg-emerald-500/5 border border-emerald-500/10"></div>
+                <!-- Main Shield Icon -->
+                <div
+                    class="relative z-10 flex h-24 w-24 items-center justify-center rounded-full bg-emerald-600 shadow-[0_0_30px_rgba(16,185,129,0.3)]">
+                    <span class="material-symbols-outlined text-white text-5xl"
+                        style="font-variation-settings: 'FILL' 1, 'wght' 600;">
+                        verified_user
+                    </span>
+                </div>
+            </div>
+            <!-- Text Content -->
+            <div class="text-center space-y-4">
+                <h1 class="text-slate-900 dark:text-slate-100 tracking-tight text-3xl font-bold leading-tight">
+                    Biometric Verified
+                </h1>
+                <p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-relaxed max-w-xs mx-auto">
+                    Face ID has been successfully linked to your secure locker.
+                </p>
+            </div>
+        </div>
+        <!-- Footer Action Area -->
+        <div class="fixed bottom-0 left-0 right-0 w-full max-w-md mx-auto p-8 mb-4">
+            <div class="flex flex-col gap-4">
+                <button
+                    class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-5 bg-primary hover:bg-primary/90 text-white text-base font-semibold transition-colors duration-200 shadow-lg shadow-primary/20">
+                    <span class="truncate">Continue</span>
+                </button>
+                <!-- Security Note -->
+                <div class="flex items-center justify-center gap-2 opacity-60">
+                    <span class="material-symbols-outlined text-xs text-slate-500 dark:text-slate-400">lock</span>
+                    <span
+                        class="text-[10px] uppercase tracking-widest font-bold text-slate-500 dark:text-slate-400">End-to-end
+                        Encrypted</span>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative Security Pattern -->
+        <div class="absolute inset-0 pointer-events-none opacity-[0.03] dark:opacity-[0.05]"
+            data-alt="Abstract grid pattern for high security interface"
+            style="background-image: radial-gradient(#137fec 0.5px, transparent 0.5px); background-size: 24px 24px;">
+        </div>
+    </div>
+</body>
+
+</html>
